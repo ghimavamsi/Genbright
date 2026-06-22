@@ -60,7 +60,7 @@ const Footer = () => {
             className="col-span-1 md:col-span-2 lg:col-span-2"
           >
             <h4 className="text-xs font-bold text-black uppercase tracking-widest mb-5">Explore</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               {['About Us', 'Our Approach', 'Learning Centers', 'Programs', 'Campus Life', 'Careers'].map((item) => (
                 <li key={item}><a href="#" className="text-[13px] text-gray-900 hover:text-black transition-colors font-semibold">{item}</a></li>
               ))}
@@ -76,7 +76,7 @@ const Footer = () => {
             className="col-span-1 md:col-span-2 lg:col-span-2"
           >
             <h4 className="text-xs font-bold text-black uppercase tracking-widest mb-5">Admissions</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               {['Admissions Process', 'Age Criteria', 'Fee Structure', 'Scholarships', 'FAQs', 'Book a Tour'].map((item) => (
                 <li key={item}><a href="#" className="text-[13px] text-gray-900 hover:text-black transition-colors font-semibold">{item}</a></li>
               ))}
@@ -92,7 +92,7 @@ const Footer = () => {
             className="col-span-1 md:col-span-2 lg:col-span-2"
           >
             <h4 className="text-xs font-bold text-black uppercase tracking-widest mb-5">Resources</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               {['Parent Partnership', 'Mentor Development', 'Blogs & Insights', 'Events', 'Handbook', 'School Policies'].map((item) => (
                 <li key={item}><a href="#" className="text-[13px] text-gray-900 hover:text-black transition-colors font-semibold">{item}</a></li>
               ))}
@@ -108,8 +108,8 @@ const Footer = () => {
             className="col-span-1 md:col-span-6 lg:col-span-2"
           >
             <h4 className="text-xs font-bold text-black uppercase tracking-widest mb-5">Connect</h4>
-            <ul className="space-y-4 text-[13px] text-gray-900 font-semibold">
-              <li className="leading-relaxed">
+            <ul className="space-y-2.5 text-[13px] text-gray-900 font-semibold">
+              <li className="leading-relaxed mb-4">
                 Donthanpalle, Mokila,<br />
                 Hyderabad – 501203
               </li>

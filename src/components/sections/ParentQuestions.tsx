@@ -51,7 +51,7 @@ const itemVariants: Variants = {
 
 const ParentQuestions = () => {
   return (
-    <section className="py-20 md:py-32 bg-white flex justify-center px-4 overflow-hidden">
+    <section className="py-24 md:py-32 bg-white flex justify-center px-4 overflow-hidden">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

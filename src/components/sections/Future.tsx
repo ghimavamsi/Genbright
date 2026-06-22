@@ -12,7 +12,7 @@ const Future = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
 
   return (
-    <section ref={ref} className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black py-32">
+    <section ref={ref} className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black py-24 md:py-32">
       {/* Background Image with Parallax */}
       <motion.div style={{ y }} className="absolute inset-0 w-full h-[130%] top-[-15%]">
         <img 

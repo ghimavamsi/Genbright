@@ -106,7 +106,7 @@ const Foundations = () => {
   });
 
   return (
-    <section className="bg-[#fafafa] relative pt-24 pb-24">
+    <section className="bg-[#fafafa] relative py-24 md:py-32">
       {/* Static heading so it perfectly scrolls away without overlapping the 3D cards */}
       <div className="text-center mb-10 px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight drop-shadow-sm">

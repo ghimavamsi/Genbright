@@ -1,6 +1,5 @@
 import { Play } from 'lucide-react';
 import { motion } from 'framer-motion';
-import founderImg from '../../assets/images/founder_thumbnail.png';
 
 const FounderMessage = () => {
   return (
@@ -29,7 +28,7 @@ const FounderMessage = () => {
           className="w-full max-w-6xl relative aspect-16/10 md:aspect-21/9 rounded-4xl md:rounded-[3rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] group cursor-pointer"
         >
           <img 
-            src={founderImg} 
+            src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?q=80&w=2069&auto=format&fit=crop" 
             alt="Founder message video thumbnail" 
             className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-105"
           />
