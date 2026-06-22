@@ -66,9 +66,10 @@ const Card = ({ i, item, progress, range, targetScale }: CardProps) => {
   return (
     <div ref={containerRef} className="h-screen flex items-center justify-center sticky top-0 px-4">
       <motion.div 
-        style={{ scale, top: `calc(${i * 20}px)` }} 
-        className="w-full max-w-[1050px] h-[75vh] md:h-[65vh] bg-white/70 backdrop-blur-2xl rounded-[3rem] shadow-[0_8px_40px_rgba(0,0,0,0.04)] border border-white/60 overflow-hidden flex flex-col md:flex-row relative origin-top transform-gpu"
+        style={{ scale, top: `calc(${i * 24}px)` }} 
+        className="w-full max-w-[1050px] h-[75vh] md:h-[65vh] bg-white rounded-[3rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 overflow-hidden flex flex-col md:flex-row relative origin-top transform-gpu"
       >
+        
         {isEven ? (
            <>
              <div className="w-full md:w-1/2 h-[45%] md:h-full relative overflow-hidden">

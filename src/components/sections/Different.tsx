@@ -1,5 +1,15 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Calendar } from 'lucide-react';
+import { ArrowRight, Calendar, Brain, Heart, Wind, CirclePause, Compass, Users, Telescope } from 'lucide-react';
+
+const pillars = [
+  { text: 'Think Deeply.', icon: Brain, color: 'text-blue-500' },
+  { text: 'Feel Fully.', icon: Heart, color: 'text-orange-500' },
+  { text: 'Move Freely.', icon: Wind, color: 'text-green-500' },
+  { text: 'Pause With Purpose.', icon: CirclePause, color: 'text-purple-500' },
+  { text: 'Look Within.', icon: Compass, color: 'text-rose-500' },
+  { text: 'Look Around.', icon: Users, color: 'text-amber-500' },
+  { text: 'Look Beyond.', icon: Telescope, color: 'text-indigo-500' },
+];
 
 const Different = () => {
   return (
@@ -46,28 +56,25 @@ const Different = () => {
               </p>
 
               {/* The 7 Pillars */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mb-12">
-                {[
-                  'Think Deeply.', 
-                  'Feel Fully.', 
-                  'Move Freely.', 
-                  'Pause With Purpose.', 
-                  'Look Within.', 
-                  'Look Around.', 
-                  'Look Beyond.'
-                ].map((phrase, i) => (
-                  <motion.div 
-                    key={i}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.3 + (i * 0.05) }}
-                    className="flex items-center gap-3"
-                  >
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 shrink-0"></div>
-                    <span className="text-lg md:text-xl font-bold text-gray-800 tracking-tight">{phrase}</span>
-                  </motion.div>
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mb-12">
+                {pillars.map((pillar, i) => {
+                  const Icon = pillar.icon;
+                  return (
+                    <motion.div 
+                      key={i}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.3 + (i * 0.05) }}
+                      className="flex items-center gap-4 group"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 group-hover:scale-110 group-hover:shadow-sm transition-all duration-300">
+                        <Icon size={18} className={pillar.color} />
+                      </div>
+                      <span className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-black transition-colors">{pillar.text}</span>
+                    </motion.div>
+                  );
+                })}
               </div>
 
               {/* Action Buttons */}

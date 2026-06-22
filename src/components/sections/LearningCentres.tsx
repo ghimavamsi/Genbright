@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 
 import imgFarm from '../../assets/images/centre_farm_1782128097827.png';
@@ -66,7 +66,7 @@ const LearningCentres = () => {
 
 
 
-  const CardSet = ({ innerRef }: { innerRef?: React.RefObject<HTMLDivElement> }) => (
+  const CardSet = ({ innerRef }: { innerRef?: React.RefObject<HTMLDivElement | null> }) => (
     <div ref={innerRef} className="flex gap-4 md:gap-5 shrink-0 pr-4 md:pr-5">
       {panels.map((panel, idx) => (
         <div 
