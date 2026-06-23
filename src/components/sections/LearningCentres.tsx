@@ -95,7 +95,7 @@ const LearningCentres = () => {
   );
 
   return (
-    <section className="min-h-[90vh] md:min-h-screen w-full flex flex-col justify-center py-24 md:py-0 bg-[#f5f5f7] overflow-hidden">
+    <section className="min-h-[90vh] md:min-h-screen w-full flex flex-col justify-center py-24 md:py-0 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 md:mb-12 w-full flex flex-col md:items-center justify-center text-center gap-4">
         <div className="max-w-2xl">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tighter leading-[1.05] mb-4">
