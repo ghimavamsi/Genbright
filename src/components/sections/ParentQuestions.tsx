@@ -51,15 +51,15 @@ const itemVariants: Variants = {
 
 const ParentQuestions = () => {
   return (
-    <section className="py-24 md:py-32 bg-white flex justify-center px-4 overflow-hidden">
+    <section className="py-12 md:py-16 bg-white flex justify-center px-4 overflow-hidden">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-6xl bg-[#fafafa] rounded-[2.5rem] p-10 md:p-16 flex flex-col items-center border border-gray-100 shadow-[0_4px_40px_rgba(0,0,0,0.03)]"
+        className="w-full max-w-6xl bg-[#f5f5f7] rounded-[3rem] md:rounded-[4rem] p-12 md:p-20 flex flex-col items-center"
       >
-        <h2 className="text-3xl md:text-[40px] font-semibold text-gray-900 mb-16 tracking-tight text-center">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-12 tracking-tighter text-center leading-[1.05]">
           Every parent asks...
         </h2>
         
@@ -68,7 +68,7 @@ const ParentQuestions = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 w-full mb-16"
+          className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 w-full mb-8"
         >
           {questions.map((q, idx) => (
             <motion.div key={idx} variants={itemVariants} className="relative group rounded-4xl overflow-hidden p-[2px]">
@@ -76,8 +76,8 @@ const ParentQuestions = () => {
               <div className={`absolute -inset-full bg-[conic-gradient(from_0deg,var(--tw-gradient-stops))] ${q.borderColors} opacity-0 group-hover:opacity-100 group-hover:animate-[spin_3s_linear_infinite] transition-opacity duration-500`}></div>
               
               {/* Inner Card Content */}
-              <div className="relative z-10 bg-white rounded-[calc(2rem-2px)] h-full p-6 md:p-8 flex flex-col items-center text-center shadow-sm">
-                <div className={`mb-6 flex items-center justify-center h-16 w-16 rounded-full transition-transform duration-300 group-hover:scale-110 ${q.bg}`}>
+              <div className="relative z-10 bg-white rounded-[calc(2rem-2px)] h-full p-5 md:p-6 flex flex-col items-center text-center shadow-sm">
+                <div className={`mb-4 flex items-center justify-center h-16 w-16 rounded-full transition-transform duration-300 group-hover:scale-110 ${q.bg}`}>
                   {q.icon}
                 </div>
                 <p className="text-[14px] md:text-[15px] font-medium text-gray-800 leading-snug">

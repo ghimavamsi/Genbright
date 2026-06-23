@@ -7,7 +7,7 @@ import imgRoots from '../../assets/images/banyan_roots_1782125714416.png';
 import imgSapling from '../../assets/images/banyan_sapling_1782125728990.png';
 import imgBranches from '../../assets/images/banyan_branches_1782125744030.png';
 import imgFull from '../../assets/images/banyan_full_1782125764248.png';
-import imgSunlit from '../../assets/images/banyan_sunlit_1782125779301.png';
+import imgFinal from '../../assets/images/banyana_tree_final.png';
 
 const stages = [
   {
@@ -41,7 +41,7 @@ const stages = [
     text: "Like a banyan tree spreading in every direction, growth has no single destination. Each experience adds new leaves, new ideas, and new opportunities."
   },
   {
-    image: imgSunlit,
+    image: imgFinal,
     icon: Sun,
     heading: "Stay Grounded. Stay Curious. Keep Growing.",
     text: "Banyara journeys alongside every GenBright child, helping them build strong roots, explore boldly, and grow into their fullest potential."
@@ -83,7 +83,7 @@ const Banyara = () => {
   const rotateX = useTransform(scrollYProgress, [0, 1], [5, -5]);
 
   return (
-    <section ref={containerRef} className="relative bg-[#fafafa] border-t border-gray-100">
+    <section ref={containerRef} className="relative bg-white">
       <div className="flex flex-col md:flex-row w-full max-w-7xl mx-auto">
         
         {/* Left Side: Sticky 3D Flipping Visuals */}
@@ -103,7 +103,7 @@ const Banyara = () => {
              
              {/* Flowing Glowing Light Bar */}
              <motion.div 
-               className="absolute top-0 left-0 right-0 bg-green-500 shadow-[0_0_12px_#22c55e] rounded-full origin-top"
+               className="absolute top-0 left-0 right-0 bg-gray-900 rounded-full origin-top"
                style={{ scaleY: scrollYProgress }}
              />
 
@@ -120,12 +120,12 @@ const Banyara = () => {
                   <div key={i} className="relative w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center z-10 shadow-sm bg-clip-padding">
                     <Icon size={18} className="text-gray-400" />
                     
-                    {/* Glowing Activated State */}
+                    {/* Activated State */}
                     <motion.div
                       style={{ 
                         opacity: useTransform(scrollYProgress, [startOffset, endOffset], [0, 1]) 
                       }}
-                      className="absolute inset-[-2px] rounded-full bg-green-500 shadow-[0_0_15px_#22c55e] flex items-center justify-center border-2 border-white"
+                      className="absolute inset-[-2px] rounded-full bg-gray-900 flex items-center justify-center border-2 border-white shadow-sm"
                     >
                       <Icon size={18} className="text-white" />
                     </motion.div>
@@ -141,14 +141,14 @@ const Banyara = () => {
             <div key={i} className="min-h-[50vh] md:min-h-screen flex items-center justify-start p-8 md:p-0 md:pr-12 lg:pr-16 border-b border-gray-100 md:border-none last:border-none">
               <div className="max-w-xl">
                 {i === 0 && (
-                  <div className="inline-block px-5 py-2 bg-green-100/80 text-green-700 font-bold tracking-wide rounded-full text-sm mb-6 border border-green-200 shadow-sm">
+                  <div className="inline-block px-5 py-2 bg-gray-100 text-gray-900 font-bold tracking-wide rounded-full text-sm mb-6 border border-gray-200 shadow-sm">
                     ✨ Meet Banyara
                   </div>
                 )}
-                <h2 className="text-[32px] md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 md:mb-8 tracking-tight leading-[1.1]">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 md:mb-8 tracking-tighter leading-[1.05]">
                   {stage.heading}
                 </h2>
-                <div className="w-12 h-1.5 bg-green-500 mb-6 md:mb-8 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.5)]"></div>
+                <div className="w-12 h-1.5 bg-gray-900 mb-6 md:mb-8 rounded-full"></div>
                 <p className="text-lg md:text-2xl text-gray-600 leading-relaxed font-medium">
                   {stage.text}
                 </p>

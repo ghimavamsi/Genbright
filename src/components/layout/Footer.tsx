@@ -38,7 +38,7 @@ const Footer = () => {
             className="col-span-2 md:col-span-6 lg:col-span-4"
           >
             <div className="mb-6">
-              <img src={logo} alt="GenBright World School Logo" className="h-10 w-auto object-contain transition-transform duration-500 hover:scale-105" />
+              <img src={logo} alt="GenBright World School Logo" className="h-12 md:h-16 w-auto object-contain transition-transform duration-500 hover:scale-105" />
             </div>
             <p className="text-sm md:text-[15px] text-gray-900 leading-relaxed max-w-xs mb-8 font-medium">
               A holistic learning community where children grow in thought, heart, body, and balance while discovering their true potential.

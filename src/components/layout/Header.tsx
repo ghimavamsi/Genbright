@@ -23,15 +23,15 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-500 bg-white/90 backdrop-blur-xl border-b border-gray-100 ${scrolled ? 'shadow-sm py-1.5' : 'py-3'}`}>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-500 bg-white/90 backdrop-blur-xl border-b border-gray-100 ${scrolled ? 'shadow-sm py-1' : 'py-1.5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14 md:h-16">
+        <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="shrink-0 flex items-center cursor-pointer">
             <img 
               src={logo} 
               alt="GenBright World School Logo" 
-              className="h-8 md:h-10 w-auto object-contain transition-all duration-500" 
+              className={`${scrolled ? 'h-10 md:h-12' : 'h-12 md:h-16'} w-auto object-contain transition-all duration-500`} 
             />
           </div>
 

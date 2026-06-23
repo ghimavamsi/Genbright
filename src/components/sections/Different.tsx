@@ -1,97 +1,82 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Calendar, Brain, Heart, Wind, CirclePause, Compass, Users, Telescope } from 'lucide-react';
+import { ArrowRight, Calendar } from 'lucide-react';
+import ctaImg from '../../assets/images/indian_kids_jumping_books_1782192777427.png';
 
 const pillars = [
-  { text: 'Think Deeply.', icon: Brain, color: 'text-blue-500' },
-  { text: 'Feel Fully.', icon: Heart, color: 'text-orange-500' },
-  { text: 'Move Freely.', icon: Wind, color: 'text-green-500' },
-  { text: 'Pause With Purpose.', icon: CirclePause, color: 'text-purple-500' },
-  { text: 'Look Within.', icon: Compass, color: 'text-rose-500' },
-  { text: 'Look Around.', icon: Users, color: 'text-amber-500' },
-  { text: 'Look Beyond.', icon: Telescope, color: 'text-indigo-500' },
+  'Think Deeply.',
+  'Feel Fully.',
+  'Move Freely.',
+  'Pause With Purpose.',
+  'Look Within.',
+  'Look Around.',
+  'Look Beyond.'
 ];
 
 const Different = () => {
   return (
-    <section className="py-24 md:py-32 bg-white flex justify-center border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <section className="py-12 md:py-16 bg-white flex justify-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="bg-[#f5f5f7] rounded-3xl md:rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row shadow-sm"
+        >
           
-          {/* Left Image Block */}
-          <div className="md:col-span-5 order-2 md:order-1">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-xl group cursor-pointer"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1972&auto=format&fit=crop" 
-                alt="Joyful child" 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
-            </motion.div>
+          {/* Left Text Content */}
+          <div className="w-full md:w-[55%] p-8 md:p-12 lg:p-16 flex flex-col justify-center order-2 md:order-1">
+            <h3 className="text-xs md:text-sm font-bold text-gray-400 tracking-widest uppercase mb-3">
+              Admissions
+            </h3>
+            
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-[1.05] mb-4">
+              If this feels different,<br />
+              it's because it is.
+            </h2>
+            
+            <p className="text-base md:text-lg text-gray-600 font-medium leading-relaxed tracking-tight mb-8">
+              GenBright isn't preparing children only for exams.<br className="hidden xl:block"/>
+              We're preparing them for life.
+            </p>
+
+            {/* The 7 Pillars as Tags */}
+            <div className="flex flex-wrap gap-2 mb-10">
+              {pillars.map((text, i) => (
+                <span 
+                  key={i} 
+                  className="text-xs md:text-sm font-semibold text-gray-700 bg-white px-3 py-1.5 rounded-full shadow-xs border border-gray-100"
+                >
+                  {text}
+                </span>
+              ))}
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <button className="w-full sm:w-auto flex items-center justify-center bg-gray-900 text-white px-6 py-3 rounded-full text-sm md:text-base font-semibold hover:bg-gray-800 hover:scale-105 transition-all duration-300 shadow-md">
+                <Calendar className="w-4 h-4 mr-2" />
+                Book a Tour
+              </button>
+              <button className="w-full sm:w-auto flex items-center justify-center bg-transparent text-gray-900 px-6 py-3 rounded-full text-sm md:text-base font-semibold hover:bg-gray-200/50 transition-all duration-300 group">
+                Speak to Admissions
+                <ArrowRight className="w-4 h-4 ml-1.5 transform group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
           </div>
 
-          {/* Right Text Content */}
-          <div className="md:col-span-7 order-1 md:order-2 md:pl-8 lg:pl-12">
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            >
-              <h3 className="text-xl font-bold text-gray-900 tracking-tight mb-4">
-                Admissions
-              </h3>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tighter leading-[1.05] mb-8">
-                If this feels different, <br className="hidden md:block"/>
-                it's because it is.
-              </h2>
-              <p className="text-lg md:text-xl text-gray-600 font-medium leading-relaxed tracking-tight mb-10 max-w-lg">
-                GenBright isn't preparing children only for exams.<br className="hidden md:block"/>
-                We're preparing them for life.
-              </p>
-
-              {/* The 7 Pillars */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mb-12">
-                {pillars.map((pillar, i) => {
-                  const Icon = pillar.icon;
-                  return (
-                    <motion.div 
-                      key={i}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.3 + (i * 0.05) }}
-                      className="flex items-center gap-4 group"
-                    >
-                      <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center shrink-0 border border-gray-100 group-hover:scale-110 group-hover:shadow-sm transition-all duration-300">
-                        <Icon size={18} className={pillar.color} />
-                      </div>
-                      <span className="text-lg md:text-xl font-bold text-gray-800 tracking-tight group-hover:text-black transition-colors">{pillar.text}</span>
-                    </motion.div>
-                  );
-                })}
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row items-center gap-4">
-                <button className="w-full sm:w-auto flex items-center justify-center bg-gray-900 text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-gray-800 hover:scale-105 transition-all duration-300 shadow-lg group">
-                  <Calendar className="w-5 h-5 mr-2 opacity-80" />
-                  Book a Campus Tour
-                </button>
-                <button className="w-full sm:w-auto flex items-center justify-center bg-white border-2 border-gray-200 text-gray-900 px-8 py-4 rounded-full text-base font-semibold hover:border-gray-900 hover:bg-gray-50 transition-all duration-300 group">
-                  Speak to Admissions
-                  <ArrowRight className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </motion.div>
+          {/* Right Image Block */}
+          <div className="w-full md:w-[45%] relative min-h-[300px] md:min-h-0 order-1 md:order-2">
+            <img 
+              src={ctaImg} 
+              alt="Indian school children" 
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
           </div>
+          
+        </motion.div>
 
-        </div>
       </div>
     </section>
   );

@@ -18,7 +18,8 @@ const Hero = () => {
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
-        {/* Removed Gradient Overlay */}
+        {/* Gradient Overlay for Text Readability */}
+        <div className="absolute inset-0 w-full md:w-3/4 lg:w-2/3 bg-linear-to-r from-black/90 via-black/40 to-transparent pointer-events-none"></div>
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 md:mt-20">
@@ -32,11 +33,11 @@ const Hero = () => {
             Childhood<br />deserves better.
           </h1>
           
-          <div className="space-y-1 mb-8">
+          <div className="flex flex-col space-y-2 mb-8 w-full">
             <p className="text-lg md:text-xl text-gray-200 font-medium">Not more pressure.</p>
             <p className="text-lg md:text-xl text-gray-200 font-medium">Not more worksheets.</p>
             <p className="text-lg md:text-xl text-gray-200 font-medium">Not more rushing.</p>
-            <p className="text-lg md:text-xl text-blue-400 font-semibold mt-2">Just more wonder.</p>
+            <p className="text-lg md:text-xl text-blue-400 font-semibold">Just more wonder.</p>
           </div>
 
           <p className="text-sm font-medium text-gray-300 uppercase tracking-wider mb-6">

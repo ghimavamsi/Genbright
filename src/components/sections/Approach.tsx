@@ -15,7 +15,7 @@ const containerVariants: Variants = {
 
 const Approach = () => {
   return (
-    <section className="py-24 md:py-32 bg-white border-t border-gray-100 overflow-hidden">
+    <section className="py-12 md:py-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           
@@ -27,12 +27,12 @@ const Approach = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="lg:col-span-4 flex flex-col justify-start pt-2"
           >
-            <h2 className="text-[32px] md:text-[40px] font-semibold text-gray-900 tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tighter leading-[1.05]">
               We don't start<br />with subjects.<br />
               We start with<br />
               <span className="text-blue-600">children.</span>
             </h2>
-            <div className="w-10 h-[2px] bg-blue-600 mt-6 rounded-full"></div>
+            <div className="w-10 h-[2px] bg-blue-600 mt-8 rounded-full"></div>
           </motion.div>
 
           {/* Right Column - 3 Pillars */}

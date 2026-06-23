@@ -66,8 +66,8 @@ const Card = ({ i, item, progress, range, targetScale }: CardProps) => {
   return (
     <div ref={containerRef} className="h-screen flex items-center justify-center sticky top-0 px-4">
       <motion.div 
-        style={{ scale, top: `calc(${i * 24}px)` }} 
-        className="w-full max-w-[1050px] h-[75vh] md:h-[65vh] bg-white rounded-[3rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 overflow-hidden flex flex-col md:flex-row relative origin-top transform-gpu"
+        style={{ scale, top: `calc(${i * 16}px)` }} 
+        className="w-full max-w-[1050px] h-[82vh] md:h-[65vh] bg-white rounded-3xl md:rounded-[3rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 overflow-hidden flex flex-col md:flex-row relative origin-top transform-gpu"
       >
         
         {isEven ? (
@@ -75,7 +75,7 @@ const Card = ({ i, item, progress, range, targetScale }: CardProps) => {
              <div className="w-full md:w-1/2 h-[45%] md:h-full relative overflow-hidden">
                 <motion.img style={{ scale: imageScale }} src={item.image} className="w-full h-full object-cover transform-gpu" />
              </div>
-             <div className={`w-full md:w-1/2 h-[55%] md:h-full flex flex-col justify-center p-8 md:p-14 lg:p-16 ${item.bgColor}`}>
+             <div className="w-full md:w-1/2 h-[55%] md:h-full flex flex-col justify-center p-8 md:p-14 lg:p-16 bg-white">
                 <h3 className={`text-3xl lg:text-4xl font-bold ${item.titleColor} mb-4 lg:mb-6 tracking-widest`}>{item.title}</h3>
                 <p className="text-2xl lg:text-3xl font-semibold text-gray-900 mb-4 lg:mb-5 leading-tight">{item.quote}</p>
                 <p className="text-base lg:text-lg text-gray-600 leading-relaxed font-medium">{item.desc}</p>
@@ -83,7 +83,7 @@ const Card = ({ i, item, progress, range, targetScale }: CardProps) => {
            </>
         ) : (
            <>
-             <div className={`w-full md:w-1/2 h-[55%] md:h-full flex flex-col justify-center p-8 md:p-14 lg:p-16 ${item.bgColor} order-2 md:order-1`}>
+             <div className="w-full md:w-1/2 h-[55%] md:h-full flex flex-col justify-center p-8 md:p-14 lg:p-16 bg-white order-2 md:order-1">
                 <h3 className={`text-3xl lg:text-4xl font-bold ${item.titleColor} mb-4 lg:mb-6 tracking-widest`}>{item.title}</h3>
                 <p className="text-2xl lg:text-3xl font-semibold text-gray-900 mb-4 lg:mb-5 leading-tight">{item.quote}</p>
                 <p className="text-base lg:text-lg text-gray-600 leading-relaxed font-medium">{item.desc}</p>
@@ -106,15 +106,15 @@ const Foundations = () => {
   });
 
   return (
-    <section className="bg-[#fafafa] relative py-24 md:py-32">
+    <section className="bg-[#f5f5f7] relative pt-12 md:pt-16 pb-0 md:pb-0">
       {/* Static heading so it perfectly scrolls away without overlapping the 3D cards */}
-      <div className="text-center mb-10 px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight drop-shadow-sm">
+      <div className="text-center mb-0 px-4">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tighter drop-shadow-sm">
           Four foundations.<br className="md:hidden"/> A lifetime of impact.
         </h2>
       </div>
 
-      <main ref={containerRef} className="relative mt-4">
+      <main ref={containerRef} className="relative">
         {foundations.map((item, i) => {
           // Increase scaling factor slightly for a deeper 3D feel
           const targetScale = 1 - ((foundations.length - i) * 0.05);
